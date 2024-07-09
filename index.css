@@ -1,0 +1,174 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+html {
+  --black: #22272e;
+  --dark-grey: #2d333b;
+  --green: #5b8e7f;
+  --grey: #8b949e;
+  --off-white: #c9d1d9;
+
+  color: var(--off-white);
+  font-family: "Inter", sans-serif;
+}
+
+body {
+  background-color: var(--black);
+}
+
+/* ########## Button ########## */
+.btn {
+  background-color: var(--dark-grey);
+  border: 1px solid var(--off-white);
+  border-radius: 5px;
+  color: var(--off-white);
+  cursor: pointer;
+  padding: 0.5rem 1rem;
+}
+
+/* ########## Header ########## */
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  background-color: var(--dark-grey);
+  padding: 0.5rem 1rem;
+}
+
+.header .logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.header .navbar {
+  align-items: center;
+  display: flex;
+  gap: 1rem;
+}
+
+.header .navbar span {
+  cursor: not-allowed;
+}
+
+/* ########## Main ########## */
+
+main {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+
+  padding-block: 2rem;
+}
+
+/* ########## Card ########## */
+
+main .card {
+  background-color: white;
+  border-radius: 5px;
+  box-shadow: var(--off-white) 0px 4px 12px;
+  padding: 1rem;
+  width: 300px;
+}
+
+/* ########## Card > Card Header ########## */
+
+main .card .card-header {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+
+  margin-bottom: 1.5rem;
+}
+
+main .card .card-header .avatar {
+  background-color: var(--black);
+  border-radius: 5px;
+  padding: 0.4rem;
+}
+
+main .card .card-header .info .name {
+  font-weight: 600;
+}
+
+main .card .card-header .info .username {
+  color: var(--grey);
+  font-size: 0.8rem;
+}
+
+/* ########## Card > Card Content ########## */
+
+main .card .card-content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+
+  color: var(--grey);
+}
+
+main .card .card-content .phone,
+main .card .card-content .email,
+main .card .card-content .website,
+main .card .card-content .address {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+
+  font-size: 0.8rem;
+}
+
+main .card .card-content .material-symbols-outlined {
+  font-size: 1.2rem;
+}
+
+/* ########## Card > Card Content > Company ########## */
+
+main .card .card-content .company {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+main .card .card-content .company .square {
+  background-color: var(--off-white);
+  border: solid 7px var(--green);
+  border-radius: 5px;
+  width: 50px;
+  height: 50px;
+}
+
+main .card .card-content .company .name {
+  color: var(--off-white);
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+main .card .card-content .company .catch-phrase {
+  font-size: 0.7rem;
+}
+
+/* ########## Loader ########## */
+.loader {
+  width: fit-content;
+  font-weight: bold;
+  font-family: monospace;
+  clip-path: inset(0 3ch 0 0);
+  animation: l4 1s steps(4) infinite;
+}
+
+.loader:before {
+  content: "Loading...";
+}
+
+@keyframes l4 {
+  to {
+    clip-path: inset(0 -1ch 0 0);
+  }
+}
